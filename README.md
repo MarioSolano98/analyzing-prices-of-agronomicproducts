@@ -2,18 +2,18 @@
 
 ## Enunciado
 
-Este tablero muestra los precios de productos agronomicos en los más grandes mercados de El Salvador. Los datos provienen desde la pagina del ministerio de agricultura y que he scrapeado para descargar, procesar y consolidad los datos. En este tablero se pueden ver los cambios de los productos a traves de los años organizados en cuatro categorias principales (Futas, Granos, Vegetales y Agroindustriales) desde diferentestes zonas en el pais. 
+Este tablero muestra los precios de productos agronomicos en los más grandes mercados de El Salvador. Los datos provienen desde la pagina del ministerio de agricultura y que he scrapeado para descargar, procesar y consolida los datos. En este tablero se pueden ver los cambios de los productos a traves de los años organizados en cuatro categorias principales (Frutas, Granos, Vegetales y Agroindustriales) desde diferentes zonas en el pais. 
 
 ### Pasos Seguidos 
 
 - Paso 1 : Cargar los datos en PowerBI Desktop, los datos están en formato csv.
 - Paso 2 : Filtrar los productos que no tienen un correlativo indicativo.
-- Paso 3 : Enriquecer la información añadiendo una tabla con las unidadesdes de diferentes productos.
-- Paso 4 : Enriqueces la información añadiendo una tabla con las ubicaciones de los mercados de El Salvador.
+- Paso 3 : Enriquecer la información añadiendo una tabla con las unidades de diferentes productos.
+- Paso 4 : Enriquecer la información añadiendo una tabla con las ubicaciones de los mercados de El Salvador.
 - Paso 5 : Añadir una tabla calendario.
 - Paso 6 : Añadir una tabla dedicada de medidas.
 
-Las medidas crearan fueron: 
+Las medidas creadas fueron: 
        
         Precio Promedio = 
         /*
@@ -67,11 +67,11 @@ Las medidas crearan fueron:
                      ))
        Cambios en Precios =
                /*
-              Actual Montly Average Price Change, this measure shows the change bewtween the actual price and the price at the begining of the selected preiod
+              Actual Montly Average Price Change, this measure shows the change bewtween the actual price and the price at the begining of the selected period
               */
                [Precio Promedio]-[Precio Promedio Mes Anterior]
                
-       Cambios en Precios Periodo Selecionado =
+       Cambios en Precios Periodo Seleccionado =
               /*
               Changes in prices in the selected period
               If a year is selected the result will be the average price in december vs the average price in january
@@ -79,29 +79,28 @@ Las medidas crearan fueron:
               [Ultimo Precio Promedio]-[Primer Precio Promedio]
        
         
-        Cambios en Precios Periodo Selecionado % =
+        Cambios en Precios Periodo Seleccionado % =
                /*
               Porcentual changes in prices in the selected period
               */
-               DIVIDE([Cambios en Precios Periodo Selecionado],[Primer Precio Promedio],0)
+               DIVIDE([Cambios en Precios Periodo Seleccionado],[Primer Precio Promedio],0)
 
  
  # Capturas de Pantalla del Tablero (Power BI DESKTOP)
 ![general-categories](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/analizing-agriculturalproductos-prices-dashboard2.png)
 
-![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/analizing-agriculturalproductos-prices-dashboard1.png)
+![productos](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/analizing-agriculturalproductos-prices-dashboard1.png)
 
 # Visualizaciones Creadas
 
 1 Crecimiento Porcentual por Categoria
-![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Percentual%20Changes%20Line%20Chart.png)
+![productos](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Percentual%20Changes%20Line%20Chart.png)
 
 2 Tarjetas por Categoria
-![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Category%20KPI%20card.png)
+![productos](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Category%20KPI%20card.png)
 
 3. Mercados y Zonas
-![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Markets%20and%20Zones%20Map.png)
+![productos](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Markets%20and%20Zones%20Map.png)
 
 4. Productos y categorias
-![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Product%20within%20Subcategory%20Line%20Chart.png)
-
+![productos](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Product%20within%20Subcategory%20Line%20Chart.png)
