@@ -1,21 +1,19 @@
-# Agricultural Products Prices-Dashboard
+# Tablero de Seguimientos de Precios de Productos Agronomicos
 
-### Dashboard Link : https://app.powerbi.com/groups/me/reports/384d017e-e935-44dc-9e7d-1626c1a36de1/ReportSection
+## Enunciado
 
-## Problem Statement
+Este tablero muestra los precios de productos agronomicos en los más grandes mercados de El Salvador. Los datos provienen desde la pagina del ministerio de agricultura y que he scrapeado para descargar, procesar y consolidad los datos. En este tablero se pueden ver los cambios de los productos a traves de los años organizados en cuatro categorias principales (Futas, Granos, Vegetales y Agroindustriales) desde diferentestes zonas en el pais. 
 
-This dashboard helps to understand the prices in agricultural products in El Salvador mayors markets. The data comes from the ministry of agriculture in daily reports and I bould a scrapper to download, process and consolidate the data. We can see the changes on products prices over the years organized on four main categories (Fruits, Grains, Vegetables and Agroindustrials) from diferents zones in the country.
+### Pasos Seguidos 
 
-### Steps followed 
+- Paso 1 : Cargar los datos en PowerBI Desktop, los datos están en formato csv.
+- Paso 2 : Filtrar los productos que no tienen un correlativo indicativo.
+- Paso 3 : Enriquecer la información añadiendo una tabla con las unidadesdes de diferentes productos.
+- Paso 4 : Enriqueces la información añadiendo una tabla con las ubicaciones de los mercados de El Salvador.
+- Paso 5 : Añadir una tabla calendario.
+- Paso 6 : Añadir una tabla dedicada de medidas.
 
-- Step 1 : Load data into Power BI Desktop, dataset is a csv file.
-- Step 2 : Filter for the prodcutos that doesnt have a correlative indicative
-- Step 3 : Enhance the information adding a table with units of different productos
-- Step 4 : Enhance the information adding a table with the location of the markets
-- Step 5 : Add a standar Calendar table
-- Step 6 : Add a dedicated measures table
-
-The measuires created where: 
+Las medidas crearan fueron: 
        
         Precio Promedio = 
         /*
@@ -88,30 +86,22 @@ The measuires created where:
                DIVIDE([Cambios en Precios Periodo Selecionado],[Primer Precio Promedio],0)
 
  
- # Report Snapshot (Power BI DESKTOP)
+ # Capturas de Pantalla del Tablero (Power BI DESKTOP)
 ![general-categories](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/analizing-agriculturalproductos-prices-dashboard2.png)
 
 ![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/analizing-agriculturalproductos-prices-dashboard1.png)
 
-# Visualizations Created
+# Visualizaciones Creadas
 
-1 Percentual Grown bt Category
+1 Crecimiento Porcentual por Categoria
 ![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Percentual%20Changes%20Line%20Chart.png)
 
-2 Category Cards
+2 Tarjetas por Categoria
 ![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Category%20KPI%20card.png)
 
-3. Markets and Zones
+3. Mercados y Zonas
 ![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Markets%20and%20Zones%20Map.png)
 
-4. Productos with in categories
+4. Productos y categorias
 ![prodcuts](https://github.com/MarioSolano98/analyzing-prices-of-agronomicproducts/blob/main/Product%20within%20Subcategory%20Line%20Chart.png)
-
-
-# Insights
-
-A 
- 
-
-
 
